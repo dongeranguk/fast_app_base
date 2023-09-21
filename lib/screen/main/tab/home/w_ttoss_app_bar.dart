@@ -1,8 +1,8 @@
-import 'package:fast_app_base/common/common.dart';
+import '../../../../common/common.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class TtossAppBar extends StatefulWidget {
+  static const double appBarHeight = 60;
   const TtossAppBar({super.key});
 
   @override
@@ -15,7 +15,7 @@ class _TtossAppBarState extends State<TtossAppBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 60,
+      height: TtossAppBar.appBarHeight,
       color: context.appColors.appBarBackground,
       child: Row(
         children: [
@@ -50,7 +50,7 @@ class _TtossAppBarState extends State<TtossAppBar> {
                     width: 6,
                     height: 6,
                     decoration:
-                        BoxDecoration(shape: BoxShape.circle, color: Colors.red),
+                        const BoxDecoration(shape: BoxShape.circle, color: Colors.red),
                   ),
                 ))
               ],
