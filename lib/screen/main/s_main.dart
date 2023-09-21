@@ -1,4 +1,3 @@
-import 'package:fast_app_base/common/cli_common.dart';
 import 'package:fast_app_base/screen/main/tab/tab_item.dart';
 import 'package:fast_app_base/screen/main/tab/tab_navigator.dart';
 import 'package:flutter/material.dart';
@@ -36,11 +35,11 @@ class MainScreenState extends State<MainScreen>
 
   static double get bottomNavigationBarBorderRadius => 30.0;
 
+  static const double bottomNavigationHeight = 50;
+
   @override
-  FutureOr<void> afterFirstLayout(BuildContext context) {
-    delay(() {
+  FutureOr<void> afterFirstLayout(BuildContext context) async {
       FlutterNativeSplash.remove();
-    }, 1500.ms);
   }
 
   @override
@@ -56,8 +55,7 @@ class MainScreenState extends State<MainScreen>
       child: Scaffold(
         extendBody: extendBody, //bottomNavigationBar 아래 영역 까지 그림
         drawer: const MenuDrawer(),
-        body: Container(
-          color: context.appColors.seedColor.getMaterialColorValues[200],
+        body: Padding(
           padding: EdgeInsets.only(
               bottom: extendBody ? 60 - bottomNavigationBarBorderRadius : 0),
           child: SafeArea(

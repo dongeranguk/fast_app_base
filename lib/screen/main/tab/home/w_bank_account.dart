@@ -2,7 +2,6 @@ import 'package:fast_app_base/common/common.dart';
 import 'package:fast_app_base/common/widget/w_rounded_container.dart';
 import 'package:fast_app_base/screen/main/tab/home/vo/vo_bank_account.dart';
 import 'package:flutter/material.dart';
-import 'package:velocity_x/velocity_x.dart';
 
 class BankAccountWidget extends StatelessWidget {
   final BankAccount account;

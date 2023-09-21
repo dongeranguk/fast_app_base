@@ -12,16 +12,22 @@ main() {
   //   print(item.accountTypeName);
   // }
 
-  final shinhanBank = bankMap["shinhan1"];
-  // print(shinhanBank == bankAccountShinhan1);
-
-  for(final entry in bankMap.entries) {
-    print(entry.key + " : " + (entry.value.accountTypeName ?? entry.value.bank.name));
-  }
+  // final shinhanBank = bankMap["shinhan1"];
+  // // print(shinhanBank == bankAccountShinhan1);
+  //
+  // for(final entry in bankMap.entries) {
+  //   print(entry.key + " : " + (entry.value.accountTypeName ?? entry.value.bank.name));
+  // }
 }
 
 //List
 final List<BankAccount> bankAccounts = [
+  bankAccountShinhan1,
+  bankAccountShinhan1,
+  bankAccountShinhan1,
+  bankAccountShinhan1,
+  bankAccountShinhan1,
+  bankAccountShinhan1,
   bankAccountShinhan1,
   bankAccountShinhan2,
   bankAccountShinhan3,
@@ -32,5 +38,9 @@ final List<BankAccount> bankAccounts = [
 //Map
 final bankMap = {
   "shinhan1": bankAccountShinhan1,
-  "shinhan2": bankAccountShinhan2
+  "shinhan2": bankAccountShinhan2,
+  "shinhan2": bankAccountShinhan2,
+  "shinhan2": bankAccountShinhan2,
+  "shinhan2": bankAccountShinhan2,
+  "shinhan2": bankAccountShinhan2,
 };
