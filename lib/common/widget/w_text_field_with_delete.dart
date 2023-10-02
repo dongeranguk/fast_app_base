@@ -129,7 +129,7 @@ class TextFieldWithDeleteState extends State<TextFieldWithDelete> {
               textInputAction: widget.textInputAction,
               inputFormatters: widget.inputFormatters,
               onEditingComplete: widget.onEditingComplete,
-              style: TextStyle(fontSize: widget.fontSize, fontWeight: widget.fontWeight),
+              style: TextStyle(fontSize: widget.fontSize, fontWeight: widget.fontWeight, color: Colors.white),
               decoration: InputDecoration(
                 contentPadding:
                     EdgeInsets.only(left: widget.leftImage == null ? 0 : 30, top: 10, bottom: 14),
@@ -141,8 +141,8 @@ class TextFieldWithDeleteState extends State<TextFieldWithDelete> {
                 enabledBorder: const UnderlineInputBorder(
                   borderSide: BorderSide(color: Colors.transparent),
                 ),
-                focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: context.appColors.focusedBorder, width: 8),
+                focusedBorder: const UnderlineInputBorder(
+                borderSide: BorderSide(color: Colors.transparent),
                 ),
               ),
             ),

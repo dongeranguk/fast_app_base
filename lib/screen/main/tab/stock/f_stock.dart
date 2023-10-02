@@ -1,5 +1,6 @@
 import 'package:fast_app_base/common/common.dart';
 import 'package:fast_app_base/common/dart/extension/num_extension.dart';
+import 'package:fast_app_base/screen/main/tab/stock/search/s_search_stock.dart';
 import 'package:fast_app_base/screen/main/tab/stock/w_stock_app_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -30,8 +31,8 @@ class _StockFragmentState extends State<StockFragment>
             ImageButton(
               imagePath: '$basePath/icon/stock_search.png',
               onTap: () {
-                context.showSnackbar("검색");
-              },
+              Nav.push(SearchStockScreen());
+                },
             ),
             ImageButton(
               imagePath: '$basePath/icon/stock_calendar.png',
