@@ -5,6 +5,7 @@ import '../../../notification/s_notification.dart';
 
 class TtossAppBar extends StatefulWidget {
   static const double appBarHeight = 60;
+
   const TtossAppBar({super.key});
 
   @override
@@ -44,18 +45,23 @@ class _TtossAppBarState extends State<TtossAppBar> {
                   "$basePath/icon/notification.png",
                   height: 30,
                 ),
-                if(_showRedDot)Positioned.fill(
-                    child: Align(
-                  alignment: Alignment.topRight,
-                  child: Container(
-                    width: 6,
-                    height: 6,
-                    decoration:
-                        const BoxDecoration(shape: BoxShape.circle, color: Colors.red),
-                  ),
-                ))
+                if (_showRedDot)
+                  Positioned.fill(
+                      child: Align(
+                    alignment: Alignment.topRight,
+                    child: Container(
+                      width: 6,
+                      height: 6,
+                      decoration: const BoxDecoration(
+                          shape: BoxShape.circle, color: Colors.red),
+                    ),
+                  ))
               ],
-            ),
+            )
+                .animate(onComplete: (controller) => controller.repeat())
+                .shake(duration: 2000.ms, hz: 3)
+                .then()
+                .fadeOut(duration: 1000.ms),
           ),
         ],
       ),
