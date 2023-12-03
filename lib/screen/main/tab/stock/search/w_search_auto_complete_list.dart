@@ -1,5 +1,5 @@
 import 'package:fast_app_base/common/common.dart';
-import 'package:fast_app_base/screen/main/tab/stock/search/StockDetailScreen.dart';
+import 'package:fast_app_base/screen/main/tab/stock/search/s_stock_detail.dart';
 import 'package:fast_app_base/screen/main/tab/stock/search/search_stock_data.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +17,7 @@ class SearchAutoCompleteList extends StatelessWidget with SearchstockDataProvide
           onTap: () {
             controller.clear();
             searchData.addHistory(stock);
-            Nav.push(StockDetailScreen(stockName));
+            Nav.push(StockDetail(stockName));
           },
           child: stockName.text.white.make().p(20),
         );
