@@ -29,6 +29,7 @@ class _SettingScreenState extends State<SettingScreen> {
         children: [
           ListView(
             controller: scrollController,
+            padding: EdgeInsets.only(top: 150),
             children: [
               Obx(
                 () =>
@@ -71,7 +72,62 @@ class _SettingScreenState extends State<SettingScreen> {
                 onTap: () async {
                   Nav.push(const OpensourceScreen());
                 },
-              )
+              ),BigButton(
+                '오픈소스 화면',
+                onTap: () async {
+                  Nav.push(const OpensourceScreen());
+                },
+              ),BigButton(
+                '오픈소스 화면',
+                onTap: () async {
+                  Nav.push(const OpensourceScreen());
+                },
+              ),BigButton(
+                '오픈소스 화면',
+                onTap: () async {
+                  Nav.push(const OpensourceScreen());
+                },
+              ),BigButton(
+                '오픈소스 화면',
+                onTap: () async {
+                  Nav.push(const OpensourceScreen());
+                },
+              ),BigButton(
+                '오픈소스 화면',
+                onTap: () async {
+                  Nav.push(const OpensourceScreen());
+                },
+              ),BigButton(
+                '오픈소스 화면',
+                onTap: () async {
+                  Nav.push(const OpensourceScreen());
+                },
+              ),BigButton(
+                '오픈소스 화면',
+                onTap: () async {
+                  Nav.push(const OpensourceScreen());
+                },
+              ),BigButton(
+                '오픈소스 화면',
+                onTap: () async {
+                  Nav.push(const OpensourceScreen());
+                },
+              ),BigButton(
+                '오픈소스 화면',
+                onTap: () async {
+                  Nav.push(const OpensourceScreen());
+                },
+              ),BigButton(
+                '오픈소스 화면',
+                onTap: () async {
+                  Nav.push(const OpensourceScreen());
+                },
+              ),BigButton(
+                '오픈소스 화면',
+                onTap: () async {
+                  Nav.push(const OpensourceScreen());
+                },
+              ),
             ],
           ),
           AnimatedAppBar('설정', controller: scrollController)
