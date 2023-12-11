@@ -1,5 +1,5 @@
 import 'package:fast_app_base/common/common.dart';
-import 'package:fast_app_base/screen/main/tab/stock/search/StockDetailScreen.dart';
+import 'package:fast_app_base/screen/main/tab/stock/search/s_stock_detail.dart';
 import 'package:fast_app_base/screen/main/tab/stock/search/search_stock_data.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -33,7 +33,7 @@ class _SearchHistoryStockListState extends State<SearchHistoryStockList>
                 child: Row(
                 children: [
                 Tap(onTap: () {
-                Nav.push(StockDetailScreen(stockName));
+                Nav.push(StockDetail(stockName));
                 },
                 child: stockName.text.white.make()),
                 Tap(onTap: () {

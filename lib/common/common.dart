@@ -10,7 +10,7 @@ export 'package:velocity_x/velocity_x.dart';
 
 export '../common/dart/extension/animation_controller_extension.dart';
 export '../common/dart/extension/context_extension.dart';
-export '../common/dart/extension/num_duration_extension.dart';
+export 'package:flutter_animate/flutter_animate.dart';
 export '../common/dart/extension/velocityx_extension.dart';
 export '../common/dart/kotlin_style/kotlin_extension.dart';
 export 'constants.dart';
