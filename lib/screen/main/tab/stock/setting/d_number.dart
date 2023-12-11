@@ -21,6 +21,7 @@ class _NotificationDialogState extends DialogState<NumberDialog> {
   final passwordController = TextEditingController();
   final numberFocus = FocusNode();
   final passwordFocus = FocusNode();
+  final textBearController = TextWatchingBearController();
 
   bool check = false;
   bool handsUp = false;
@@ -67,6 +68,7 @@ class _NotificationDialogState extends DialogState<NumberDialog> {
                   check: check,
                   handsUp: handsUp,
                   look: look,
+                  controller: textBearController,
                 ),
               ),
               TextField(
@@ -78,16 +80,22 @@ class _NotificationDialogState extends DialogState<NumberDialog> {
               TextField(
                 focusNode: passwordFocus,
                 obscureText: true,
-                controller: numberController,
+                controller: passwordController,
                 keyboardType: TextInputType.number,
                 style: const TextStyle(color: Colors.white),
               ),
               RoundButton(
                   text: '완료',
-                  onTap: () {
+                  onTap: () async {
                     final text = numberController.text;
-                    int number = int.parse(text);
-                    widget.hide(number);
+                    try {
+                      int number = int.parse(text);
+                      textBearController.runSuccessAnimation();
+                      await sleepAsync(1000.ms);
+                      widget.hide(number);
+                    } catch (e) {
+                      textBearController.runFailAnimation();
+                    }
                   })
             ],
           ))
